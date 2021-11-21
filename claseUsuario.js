@@ -14,7 +14,7 @@ class Usuario {
 
 
     getFullName(){
-        return (this.nombre + " " + this.apellido)
+        return ("El nombre completo es: " + this.nombre + " " + this.apellido)
     } 
 
     addMascota(mascota) {
@@ -22,7 +22,8 @@ class Usuario {
     }
 
     countMascotas(){
-        console.log(mascotas.length)
+        console.log(this.mascotas) ///reparar
+        
     }
 
     addLibro(libro) {
