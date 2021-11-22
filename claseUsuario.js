@@ -4,11 +4,11 @@ let apellido = "Morel";
 
 class Usuario {
 
-    constructor (nombre,apellido,libros,mascotas){
+    constructor (nombre,apellido){
         this.nombre = nombre
         this.apellido = apellido
-        this.libros = libros
-        this.mascotas = mascotas
+        this.libros = [{nombre: "Vagabundos" , autor:"Jose Antunez"}]
+        this.mascotas = ["Perro", "Gato"]
 
     }
 
@@ -22,8 +22,7 @@ class Usuario {
     }
 
     countMascotas(){
-        console.log(this.mascotas) ///reparar
-        
+        return this.mascotas > 0 ? this.mascotas.length : "Las mascotas existentes son: " + this.mascotas;
     }
 
     addLibro(libro) {
@@ -40,7 +39,7 @@ class Usuario {
     
 }
 
-let nuevoUsuario = new Usuario ("Damian", "Morel", [{nombre: "Vagabundos" , autor:"Jose Antunez"}], ["Perro", "Gato"])
+let nuevoUsuario = new Usuario ("Damian", "Morel")
 
 console.log(nuevoUsuario.getFullName())
 console.log(nuevoUsuario.mascotas)
